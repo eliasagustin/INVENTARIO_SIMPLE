@@ -52,6 +52,7 @@
     		$_SESSION['usuario']=$check_user['usuario_usuario'];
 
     		if(headers_sent()){
+                //Sino se envían los encabezados recargo la web con js
 				echo "<script> window.location.href='index.php?vista=home'; </script>";
 			}else{
 				header("Location: index.php?vista=home");
